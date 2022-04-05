@@ -4,8 +4,5 @@
              xmlns:local="clr-namespace:PizzaRendeles"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate>
-            
-        </DataTemplate>
     </Application.Resources>
 </Application>
