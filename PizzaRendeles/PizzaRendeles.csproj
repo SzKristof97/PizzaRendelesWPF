@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Exceptions\" />
-    <Folder Include="Windows\" />
-    <Folder Include="UserControls\" />
   </ItemGroup>
 
 </Project>
