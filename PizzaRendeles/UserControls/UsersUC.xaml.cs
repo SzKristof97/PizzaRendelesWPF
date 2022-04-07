@@ -24,5 +24,7 @@ namespace PizzaRendeles.UserControls
         {
             InitializeComponent();
         }
+
+        
     }
 }

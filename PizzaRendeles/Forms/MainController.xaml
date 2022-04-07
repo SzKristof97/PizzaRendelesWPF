@@ -51,6 +51,8 @@
                             Background="#0c0e1f"
                             Foreground="White"
                             
+                            Margin="5 0 0 0"
+                            
                             Width="200" Height="40"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
@@ -68,6 +70,8 @@
                     <Button x:Name="usersBtn"
                             Background="#0c0e1f"
                             Foreground="White"
+                            
+                            Margin="0 0 5 0"
                             
                             Width="200" Height="40"
                             HorizontalContentAlignment="Center"

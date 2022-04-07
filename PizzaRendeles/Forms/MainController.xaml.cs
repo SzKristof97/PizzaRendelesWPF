@@ -21,9 +21,9 @@ namespace PizzaRendeles.Forms
     public partial class MainController : Window
     {
         private MainWindow Core;
-        private string ucContent;
+        private string? ucContent;
 
-        public string UCContent {
+        public string? UCContent {
             get
             {
                 return ucContent;
@@ -87,7 +87,7 @@ namespace PizzaRendeles.Forms
 
         #region Content Change Events
 
-        private void OnContentChanged(string value)
+        private void OnContentChanged(string? value)
         {
             switch (value)
             {

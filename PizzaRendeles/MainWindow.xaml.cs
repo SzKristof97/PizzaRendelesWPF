@@ -77,14 +77,18 @@ namespace PizzaRendeles
             userpasswordInput.BorderBrush = new SolidColorBrush(Colors.White);
 
             // Database here
-            bool isValid = true;
+            Database.Database.LoginAdmin(username, password, out int id);
 
             // Validation is correct
-            if (isValid)
+            if (id != -1)
             {
                 this.Visibility = Visibility.Hidden;
 
                 new MainController(this).Show();
+            }
+            else
+            {
+                MessageBox.Show("Username or Password is incorrect!", "Wrong Datas", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +26,22 @@ namespace PizzaRendeles.UserControls
         public OrderUC()
         {
             InitializeComponent();
+        }
+
+        private void Display()
+        {
+            Database.Database.DisplayAndSearch("SELECT ID,PizzaName,CustomerName,OrderDate,Finished,AdminID FROM `orders`", dataGrid);
+        }
+
+        private void LoadDb()
+        {
+            Debug.WriteLine("Displaying orders");
+            Display();
+        }
+
+        private void dataGrid_Initialized(object sender, EventArgs e)
+        {
+            LoadDb();
         }
     }
 }

@@ -7,14 +7,58 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="OrderUC"
-               Foreground="White"
-               
-               FontFamily="Times New Roman"
-               FontSize="32" FontWeight="Bold"
-               
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"
-               />
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="dataGrid"
+                  Grid.Row="0" Margin="10,10,10,10"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=LoadDataBinding}"
+                  Background="Transparent" 
+                  BorderBrush="Transparent"
+                  Initialized="dataGrid_Initialized"
+                  
+                  RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="ID"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    IsReadOnly="True"
+                                    CanUserResize="False"
+                                    Binding="{Binding Path=ID}"
+                                    Width="50"/>
+                <DataGridTextColumn Header="PizzaName"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    CanUserResize="False"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Path=PizzaName}"
+                                    Width="180"/>
+                <DataGridTextColumn Header="CustomerName"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    CanUserResize="False"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Path=CustomerName}"
+                                    Width="180"/>
+                <DataGridTextColumn Header="OrderDate"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    CanUserResize="False"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Path=OrderDate}"
+                                    Width="180"/>
+                <DataGridTextColumn Header="Finished"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    CanUserResize="False"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Path=Finished}"
+                                    Width="70"/>
+                <DataGridTextColumn Header="AdminID"
+                                    FontFamily="Times New Roman" FontSize="14" 
+                                    CanUserResize="False"
+                                    IsReadOnly="True"
+                                    Binding="{Binding Path=AdminID}"
+                                    Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
